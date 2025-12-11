@@ -1,0 +1,45 @@
+# ========== PYTHON ==========
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+.jupyter/
+.venv/
+venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========== MATLAB ==========
+*.asv
+*.autosave
+*.slxc
+slprj/
+*.mex*
+matlab.mat
+*.fig
+
+# ========== IDE & EDITOR ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ========== DATA & RESULTS ==========
+# Игнорируем большие данные, но сохраняем структуру папок
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ========== LOGS & TEMP ==========
+*.log
+*.tmp
+.cache/
