@@ -1,11 +1,11 @@
 /* МИСИС Премиум Оформление */
 
 :root {
-  --primary: #FF5A00; /* Фирменный оранжевый МИСИС */
-  --primary-hover: #E04E00;
-  --bg-color: #FAFAFA; /* Чистый белый/серый фон */
-  --text-main: #1C1E21;
-  --accent: #0072CE; /* Индиго/синий для контраста и ссылок */
+  --primary: #008AD2; /* Яркий синий/голубой из логотипа МИСИС */
+  --primary-hover: #006CA8; /* Чуть более темный синий */
+  --bg-color: #FAFAFB; /* Чистый белый с едва уловимым синим оттенком */
+  --text-main: #333945; /* Темно-графитовый из текста логотипа */
+  --accent: #00B4E5; /* Светло-голубой (циан) для акцентов */
 }
 
 /* Общий стиль */
@@ -55,12 +55,12 @@ a:hover {
   color: var(--primary) !important;
   border-left: 4px solid var(--primary);
   padding-left: calc(1rem - 4px); /* Корректировка отступа для рамки */
-  background: rgba(255, 90, 0, 0.05); /* Легкий оранжевый фон */
+  background: rgba(0, 138, 210, 0.05); /* Легкий синий фон */
 }
 
 .nav-list-link:hover {
   color: var(--primary-hover) !important;
-  background: rgba(255, 90, 0, 0.05);
+  background: rgba(0, 138, 210, 0.05);
 }
 
 /* Заголовки */
@@ -130,33 +130,33 @@ div.highlighter-rouge pre {
 
 /* Кнопки */
 .btn {
-  background-color: var(--primary) !important;
+  background: linear-gradient(135deg, #00B4E5 0%, #0060A8 100%) !important;
   color: white !important;
   font-weight: 600;
   border-radius: 6px;
   border: none !important;
   padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(255, 90, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 138, 210, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .btn:hover {
-  background-color: var(--primary-hover) !important;
+  filter: brightness(1.1);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(255, 90, 0, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 138, 210, 0.4);
   text-decoration: none !important;
 }
 
 /* Кастомный баннер на главной (Герой) */
 .hero-banner {
-  background: linear-gradient(135deg, #1C1E21 0%, #30343A 100%);
+  background: linear-gradient(135deg, #2D323E 0%, #1a1d24 100%);
   color: white;
   padding: 3rem 2rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
@@ -167,10 +167,10 @@ div.highlighter-rouge pre {
   position: absolute;
   top: -50%;
   right: -10%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,90,0,0.8) 0%, rgba(255,90,0,0) 70%);
-  opacity: 0.5;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0,180,229,0.35) 0%, rgba(0,96,168,0) 70%);
+  opacity: 0.8;
   filter: blur(40px);
 }
 
