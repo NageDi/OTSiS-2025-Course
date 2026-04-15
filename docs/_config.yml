@@ -1,5 +1,7 @@
-title: OTSiS MATLAB Course
+title: НИТУ МИСИС. ОТСиС
 description: Лабораторный практикум по теории сигналов и систем
 remote_theme: just-the-docs/just-the-docs
 url: https://nagedi.github.io
 baseurl: /OTSiS-2025-Course
+logo: "/assets/images/misis_logo.png"
+color_scheme: light

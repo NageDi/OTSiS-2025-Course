@@ -1,0 +1,198 @@
+/* МИСИС Премиум Оформление */
+
+:root {
+  --primary: #FF5A00; /* Фирменный оранжевый МИСИС */
+  --primary-hover: #E04E00;
+  --bg-color: #FAFAFA; /* Чистый белый/серый фон */
+  --text-main: #1C1E21;
+  --accent: #0072CE; /* Индиго/синий для контраста и ссылок */
+}
+
+/* Общий стиль */
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+/* Логотип и верхняя панель (Sidebar) */
+.side-bar {
+  background-color: #FFFFFF !important;
+  border-right: 1px solid #EAEAEA !important;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.02);
+}
+
+.site-title {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #1C1E21 !important;
+}
+
+/* Логотип в сайдбаре: убрать белый фон, ограничить размер */
+.site-logo {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+  mix-blend-mode: multiply; /* Убирает артефакты белого фона */
+}
+
+/* Ссылки */
+a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary) !important;
+  text-decoration: underline !important;
+}
+
+/* Навигация (меню) сайдбара */
+.nav-list-item.active > .nav-list-link {
+  font-weight: 700;
+  color: var(--primary) !important;
+  border-left: 4px solid var(--primary);
+  padding-left: calc(1rem - 4px); /* Корректировка отступа для рамки */
+  background: rgba(255, 90, 0, 0.05); /* Легкий оранжевый фон */
+}
+
+.nav-list-link:hover {
+  color: var(--primary-hover) !important;
+  background: rgba(255, 90, 0, 0.05);
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 700 !important;
+  color: #0A0A0A;
+  margin-top: 1.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.2em;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 0.3em;
+}
+
+/* Таблицы (сделать премиум) */
+table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 2em 0;
+}
+
+table th {
+  background-color: #1C1E21;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 12px 16px;
+}
+
+table td {
+  padding: 12px 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Блоки кода */
+pre, code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  background-color: #F4F5F7 !important;
+  border-radius: 6px;
+}
+
+div.highlighter-rouge pre {
+  padding: 1rem;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+  border: 1px solid #E0E0E0;
+}
+
+/* Кнопки */
+.btn {
+  background-color: var(--primary) !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none !important;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(255, 90, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 90, 0, 0.3);
+  text-decoration: none !important;
+}
+
+/* Кастомный баннер на главной (Герой) */
+.hero-banner {
+  background: linear-gradient(135deg, #1C1E21 0%, #30343A 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,90,0,0.8) 0%, rgba(255,90,0,0) 70%);
+  opacity: 0.5;
+  filter: blur(40px);
+}
+
+.hero-banner h1 {
+  border: none;
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-banner .btn {
+  z-index: 2;
+  position: relative;
+}
